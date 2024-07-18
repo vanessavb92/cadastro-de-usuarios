@@ -1,50 +1,91 @@
-Este projeto é uma aplicação web para cadastro e gerenciamento de usuários, desenvolvida utilizando React no frontend e Prisma com MongoDB no backend.
+# Projeto de Cadastro de Usuários
 
-
+Este projeto é uma aplicação de cadastro de usuários construída com React e Vite. A aplicação permite que os usuários registrem nome, idade e email, salvem esses dados em um banco de dados, e também excluam registros.
 ![Descrição da Imagem](./src/assets/cadastro.png)
-* Funcionalidades
-Cadastro de Usuários: Permite que o usuário insira seu nome, idade e email através de um formulário.
-Visualização de Usuários: Lista os usuários cadastrados em cards com suas informações.
-Exclusão de Usuários: Permite a remoção de usuários cadastrados.
-Pré-requisitos
-Antes de começar, certifique-se de ter instalado as seguintes ferramentas:
 
-Node.js (v14.x ou superior)
-npm (gerenciador de pacotes do Node.js)
-MongoDB (local ou em serviço na nuvem)
-Instalação
-Siga os passos abaixo para instalar e configurar o projeto localmente:
+## Tecnologias Utilizadas
 
-1. Clonar o repositório
-bash
-Copiar código
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-cd nome-do-repositorio
-2. Instalar as dependências
-Backend
-bash
-Copiar código
-cd backend
-npm install
-Frontend
-bash
-Copiar código
-cd frontend
-npm install
-3. Configurar o banco de dados
-Certifique-se de que o MongoDB esteja configurado e acessível. Você pode ajustar as configurações de conexão no arquivo backend/prisma/schema.prisma.
+- React
+- JavaScript
+- Vite
+- Axios
+- Prisma
+- MongoDB
 
-4. Executar o servidor backend
-bash
-Copiar código
-cd backend
-npm start
-5. Executar o aplicativo frontend
-Abra um novo terminal e execute:
+## Funcionalidades
 
-bash
-Copiar código
-cd frontend
-npm start
-O aplicativo estará disponível em http://localhost:3000.
+- Cadastro de usuários com nome, idade e email
+- Listagem de usuários cadastrados
+- Exclusão de usuários
+- Persistência de dados com Prisma e MongoDB
 
+## Instalação
+
+### Pré-requisitos
+
+- Node.js
+- npm ou yarn
+
+### Passo a Passo
+
+1. Clone o repositório do frontend:
+    ```bash
+    git clone https://github.com/<seu-usuario-github>/<frontend-repo>.git
+    ```
+   
+2. Navegue até o diretório do projeto:
+    ```bash
+    cd <frontend-repo>
+    ```
+
+3. Instale as dependências:
+    ```bash
+    npm install
+    ```
+
+4. Inicie o servidor de desenvolvimento:
+    ```bash
+    npm run dev
+    ```
+
+### Backend
+
+O backend deste projeto está configurado com Prisma e MongoDB. Siga os passos abaixo para configurar o backend:
+
+1. Clone o repositório do backend:
+    ```bash
+    git clone https://github.com/<seu-usuario-github>/<backend-repo>.git
+    ```
+
+2. Navegue até o diretório do projeto:
+    ```bash
+    cd <backend-repo>
+    ```
+
+3. Instale as dependências:
+    ```bash
+    npm install
+    ```
+
+4. Configure o Prisma e o banco de dados:
+    - Crie um arquivo `.env` na raiz do projeto com a configuração do banco de dados MongoDB:
+    ```
+    DATABASE_URL="mongodb+srv://<usuario>:<senha>@cluster.mongodb.net/<nome-do-banco>?retryWrites=true&w=majority"
+    ```
+
+5. Execute as migrações do Prisma:
+    ```bash
+    npx prisma migrate dev
+    ```
+
+6. Inicie o servidor backend:
+    ```bash
+    npm run dev
+    ```
+
+## Deploy
+
+O deploy do frontend é realizado no GitHub Pages. Para fazer o deploy, execute:
+
+```bash
+npm run deploy
