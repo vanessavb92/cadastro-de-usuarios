@@ -1,8 +1,7 @@
 Este projeto é uma aplicação web para cadastro e gerenciamento de usuários, desenvolvida utilizando React no frontend e Prisma com MongoDB no backend.
 
 
-![Descrição da Imagem](./src/assets/cadastro.png){ width=50% }
-
+![Descrição da Imagem](./src/assets/cadastro.png)
 * Funcionalidades
 Cadastro de Usuários: Permite que o usuário insira seu nome, idade e email através de um formulário.
 Visualização de Usuários: Lista os usuários cadastrados em cards com suas informações.
